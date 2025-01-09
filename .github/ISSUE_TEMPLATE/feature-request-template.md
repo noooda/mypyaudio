@@ -1,15 +1,10 @@
 ---
 name: Feature request template
-about: Feature request template
+about: 機能の実装 & 改修など
 title: ''
 labels: ''
 assignees: ''
 
----
-
----
-name: Feature request
-about: 新機能や改善等の仕様用
 ---
 
 ## 目的
