@@ -1,8 +1,8 @@
 import logging
 
 from src.application.use_cases import DownloadAudioUseCase
-from src.infrastructure.file import EnglishAudioFileWriter
-from src.infrastructure.repositories import EnglishAudioRepository
+from src.infrastructure.file import AudioFileWriter
+from src.infrastructure.repositories import GeneralAudioRepository
 from src.presentation.cli import CommandHandler
 from src.utils import setup_argparse, setup_logger
 
@@ -15,8 +15,8 @@ def main() -> None:
 
     command_handler = CommandHandler(
         download_audio_use_case=DownloadAudioUseCase(
-            audio_file_writer=EnglishAudioFileWriter(),
-            audio_repository=EnglishAudioRepository(),
+            binary_writer=AudioFileWriter(),
+            audio_repository=GeneralAudioRepository(),
         )
     )
 

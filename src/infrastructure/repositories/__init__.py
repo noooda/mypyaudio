@@ -1,3 +1,3 @@
-from .english_audio_repository import EnglishAudioRepository
+from .general_audio_repository import GeneralAudioRepository
 
-__all__ = ['EnglishAudioRepository']
+__all__ = ['GeneralAudioRepository']

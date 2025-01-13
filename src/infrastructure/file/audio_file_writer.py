@@ -1,10 +1,10 @@
 import requests
 
-from src.application.interfaces import AudioFileWriter
+from src.application.interfaces import BinaryWriter
 from src.exceptions import FetchAudioStreamError, WriteAudioFileError
 
 
-class EnglishAudioFileWriter(AudioFileWriter):
+class AudioFileWriter(BinaryWriter):
     def __init__(self) -> None:
         pass
 

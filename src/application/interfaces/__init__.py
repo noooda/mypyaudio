@@ -1,4 +1,4 @@
-from .audio_file_writer import AudioFileWriter
 from .audio_repository import AudioRepository
+from .binary_writer import BinaryWriter
 
-__all__ = ['AudioRepository', 'AudioFileWriter']
+__all__ = ['AudioRepository', 'BinaryWriter']
