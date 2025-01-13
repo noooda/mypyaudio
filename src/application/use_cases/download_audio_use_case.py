@@ -1,6 +1,6 @@
 import requests
 
-from src.application.interfaces import AudioFileWriter, AudioRepository
+from src.application.interfaces import AudioRepository, BinaryWriter
 from src.exceptions import FetchAudioStreamError, WriteAudioFileError
 
 
@@ -8,10 +8,10 @@ class DownloadAudioUseCase:
     def __init__(
         self,
         audio_repository: AudioRepository,
-        audio_file_writer: AudioFileWriter,
+        binary_writer: BinaryWriter,
     ) -> None:
         self.audio_repository = audio_repository
-        self.audio_file_writer = audio_file_writer
+        self.binary_writer = binary_writer
 
     def execute(self, url: str, file_path: str) -> None:
         try:
@@ -29,4 +29,4 @@ class DownloadAudioUseCase:
     def _write_audio_file(
         self, stream: requests.Response, file_path: str
     ) -> None:
-        self.audio_file_writer.write(stream, file_path)
+        self.binary_writer.write(stream, file_path)

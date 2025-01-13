@@ -3,7 +3,7 @@ from unittest.mock import Mock
 import pytest
 import requests
 
-from src.application.interfaces import AudioFileWriter, AudioRepository
+from src.application.interfaces import AudioRepository, BinaryWriter
 from src.application.use_cases import DownloadAudioUseCase
 
 
@@ -13,15 +13,15 @@ def mock_audio_repository(mocker: Mock) -> Mock:
 
 
 @pytest.fixture
-def mock_audio_file_writer(mocker: Mock) -> Mock:
-    return mocker.Mock(spec=AudioFileWriter)
+def mock_binary_writer(mocker: Mock) -> Mock:
+    return mocker.Mock(spec=BinaryWriter)
 
 
 def test_call_audio_repository(
-    mock_audio_repository: Mock, mock_audio_file_writer: Mock
+    mock_audio_repository: Mock, mock_binary_writer: Mock
 ) -> None:
     download_audio_use_case = DownloadAudioUseCase(
-        mock_audio_repository, mock_audio_file_writer
+        mock_audio_repository, mock_binary_writer
     )
     audio_repository_url = 'https://example.com/audio.mp3'
     download_audio_use_case._get_audio_stream(audio_repository_url)
@@ -30,25 +30,23 @@ def test_call_audio_repository(
     )
 
 
-def test_call_audio_file_writer(
-    mocker: Mock, mock_audio_repository: Mock, mock_audio_file_writer: Mock
+def test_call_binary_writer(
+    mocker: Mock, mock_audio_repository: Mock, mock_binary_writer: Mock
 ) -> None:
     download_audio_use_case = DownloadAudioUseCase(
-        mock_audio_repository, mock_audio_file_writer
+        mock_audio_repository, mock_binary_writer
     )
     audio_file_path = 'path/to/audio.mp3'
     response = mocker.Mock(spec=requests.Response)
     download_audio_use_case._write_audio_file(response, audio_file_path)
-    mock_audio_file_writer.write.assert_called_once_with(
-        response, audio_file_path
-    )
+    mock_binary_writer.write.assert_called_once_with(response, audio_file_path)
 
 
 def test_execute(
-    mocker: Mock, mock_audio_repository: Mock, mock_audio_file_writer: Mock
+    mocker: Mock, mock_audio_repository: Mock, mock_binary_writer: Mock
 ) -> None:
     download_audio_use_case = DownloadAudioUseCase(
-        mock_audio_repository, mock_audio_file_writer
+        mock_audio_repository, mock_binary_writer
     )
     audio_stream = mocker.Mock(spec=requests.Response)
     mock_get_audio_stream = mocker.patch.object(

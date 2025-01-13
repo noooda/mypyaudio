@@ -1,3 +1,3 @@
-from .english_audio_file_writer import EnglishAudioFileWriter
+from .audio_file_writer import AudioFileWriter
 
-__all__ = ['EnglishAudioFileWriter']
+__all__ = ['AudioFileWriter']

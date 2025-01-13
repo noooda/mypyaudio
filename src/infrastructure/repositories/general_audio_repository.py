@@ -4,7 +4,7 @@ from src.application.interfaces import AudioRepository
 from src.exceptions import FetchAudioStreamError
 
 
-class EnglishAudioRepository(AudioRepository):
+class GeneralAudioRepository(AudioRepository):
     def __init__(self) -> None:
         pass
 
