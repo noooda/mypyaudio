@@ -1,4 +1,4 @@
-# pyaudio
+# mypyaudio
 A simple audio downloader made with python
 
 ## Example
