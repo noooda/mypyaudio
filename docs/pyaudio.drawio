@@ -1,22 +1,22 @@
 <mxfile host="65bd71144e">
     <diagram name="Page-1" id="5JtmjxZ7_MOpq23QLKK0">
-        <mxGraphModel dx="2952" dy="880" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="3236" dy="978" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="zTDAnFvsAF5PBpJ9swVf-1" value="cli" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="-60" y="260" width="120" height="60" as="geometry"/>
+                <mxCell id="4aR_HG7Pa8yGlt5CRm5P-23" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-60" y="135" width="1610" height="460" as="geometry"/>
                 </mxCell>
                 <mxCell id="zTDAnFvsAF5PBpJ9swVf-2" value="CommandHandler" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="480" y="260" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="zTDAnFvsAF5PBpJ9swVf-3" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="zTDAnFvsAF5PBpJ9swVf-1" target="16" edge="1">
+                <mxCell id="zTDAnFvsAF5PBpJ9swVf-3" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" source="4aR_HG7Pa8yGlt5CRm5P-18" target="16" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="400" y="400" as="sourcePoint"/>
+                        <mxPoint x="60" y="290" as="sourcePoint"/>
                         <mxPoint x="210" y="290" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="zTDAnFvsAF5PBpJ9swVf-4" value="引数を解析、CommandHandlerに渡す" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                <mxCell id="zTDAnFvsAF5PBpJ9swVf-4" value="- 引数を取得&lt;div&gt;- 引数をCommandHandlerに渡す&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="210" y="320" width="190" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="zTDAnFvsAF5PBpJ9swVf-6" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="zTDAnFvsAF5PBpJ9swVf-2" target="zTDAnFvsAF5PBpJ9swVf-8" edge="1">
@@ -43,7 +43,7 @@
                         <mxPoint x="1240" y="400" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="5" value="EnglishAudioRepository" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                <mxCell id="5" value="GeneralAudioRepository" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="1320" y="260" width="150" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="7" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="zTDAnFvsAF5PBpJ9swVf-8" target="8" edge="1">
@@ -64,23 +64,44 @@
                 <mxCell id="10" value="AudioFileWriter" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="1320" y="440" width="150" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="13" value="ダウンロードメッセージの生成" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                <mxCell id="14" value="- ビジネスロジック" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="750" y="320" width="190" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="14" value="音声ダウンロード" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-                    <mxGeometry x="750" y="350" width="190" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="16" value="argparse" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="16" value="argparse" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="210" y="260" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="17" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="16" target="zTDAnFvsAF5PBpJ9swVf-2">
+                <mxCell id="17" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="16" target="zTDAnFvsAF5PBpJ9swVf-2" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="670" y="400" as="sourcePoint"/>
                         <mxPoint x="480" y="290" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="18" value="処理を実行する" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                <mxCell id="4aR_HG7Pa8yGlt5CRm5P-18" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/ionicons-sharp-vol-2/512/terminal-sharp-128.png" parent="1" vertex="1">
+                    <mxGeometry x="-5" y="256" width="68" height="68" as="geometry"/>
+                </mxCell>
+                <mxCell id="4aR_HG7Pa8yGlt5CRm5P-19" value="- 引数をもとに処理を呼び出し" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="480" y="320" width="190" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="4aR_HG7Pa8yGlt5CRm5P-26" value="プレゼンテーション層" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="445" y="200" width="190" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="4aR_HG7Pa8yGlt5CRm5P-27" value="アプリケーション層" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="870" y="200" width="190" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="4aR_HG7Pa8yGlt5CRm5P-28" value="データアクセス層" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="1300" y="200" width="190" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="4aR_HG7Pa8yGlt5CRm5P-29" value="- インターフェース" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="1050" y="320" width="190" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="4aR_HG7Pa8yGlt5CRm5P-30" value="- インターフェース" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="1050" y="500" width="190" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="4aR_HG7Pa8yGlt5CRm5P-31" value="- 音声データへのアクセス" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="1320" y="320" width="190" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="4aR_HG7Pa8yGlt5CRm5P-32" value="- 音声データの書き込み" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="1320" y="500" width="190" height="30" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
